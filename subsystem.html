@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subsystem</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Return to Interface</a>
+    <a href="about.html">Operator Manual</a>
+    <a href="cv.html">Technical Specifications</a>
+    <a href="system-map.html">System Map</a>
+</nav>
+
+<div class="container">
+    <div class="system-text">Subsystem Loaded</div>
+    <h2 id="subsystem-title">FOOD Subsystem</h2>
+
+    <div class="project-module">
+        <div class="label">Experiment Module</div>
+        <h3><a href="project.html?name=khadya-mart">Khadya Mart</a></h3>
+        <p>Explorations of nourishment, warmth, and automation.</p>
+    </div>
+
+    <div class="project-module">
+        <div class="label">Experiment Module</div>
+        <h3>Solar Rasam</h3>
+        <p>Disaster recipes from climate-stricken futures.</p>
+    </div>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const type = params.get('type');
+document.getElementById("subsystem-title").innerText =
+    type ? type.toUpperCase() + " Subsystem" : "Subsystem";
+</script>
+
+</body>
+</html>
