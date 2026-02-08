@@ -1,34 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Human Futures Interface v3.7</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chaitali Portfolio Hero</title>
 
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 </head>
-<body>
 
-<header>
-    <div class="system-text">System Ready</div>
-    <h1>Human Futures Interface v3.7</h1>
-    <div>Select a human question to process</div>
-</header>
-
-<div class="container">
-    <div class="button-grid">
-        <a href="subsystem.html?type=food" class="machine-button">FOOD</a>
-        <a href="subsystem.html?type=city" class="machine-button">CITY</a>
-        <a href="subsystem.html?type=body" class="machine-button">BODY</a>
-        <a href="subsystem.html?type=story" class="machine-button">STORY</a>
-        <a href="subsystem.html?type=climate" class="machine-button">CLIMATE</a>
-        <a href="subsystem.html?type=memory" class="machine-button">MEMORY</a>
-    </div>
+<div class="scroll-indicator">
+  <div class="scroll-line"></div>
+  <div class="scroll-text">SCROLL</div>
 </div>
 
-<footer>
-    Operator: Chaitali Kulkarni
-</footer>
 
-<script src="js/main.js"></script>
+<body>
+
+
+  <section class="hero">
+
+
+<!-- Fixed Video Background -->
+<div class="hero">
+  <video id="scrollVideo" preload="auto" muted playsinline>
+    <source src="assets/hero.mp4" type="video/mp4">
+  </video>
+
+  <!-- Color + light treatment layers -->
+  <div class="overlay-dark"></div>
+  <div class="overlay-warmth"></div>
+  <div class="overlay-vignette"></div>
+  <div class="overlay-spotlight"></div>
+
+  <!-- Left collage strip -->
+  <div class="collage-strip"></div>
+</div>
+
+<!-- Constant Title -->
+<div class="title-fixed">
+  <span>Hi, I’m</span><br/>
+  <strong>Chaitali</strong>
+</div>
+
+
+<!-- Sliding text lines -->
+<div class="text-sequence">
+  <div class="line">This is my studio</div>
+  <div class="line">I build machines that ask questions</div>
+  <div class="line">About food, cities, stories, futures</div>
+  <div class="line">And what it means to remain human</div>
+</div>
+</section>
+
+<!---<div style="height:100vh;"></div>-->
+
+
+  <section class="machine-intro">
+
+  <div class="title-layer">
+    <img src="assets/human.png" class="title-image">
+  </div>
+
+  <div class="intro-text">
+    <div class="text-block">
+      <p>
+        My practice is a machine for remaining human.<br><br>
+        It listens to cities, collects stories, processes rituals,
+        and imagines speculative futures where technology
+        amplifies our humanity instead of erasing it.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<section class="machine-section">
+
+  <div class="machine">
+
+    <img src="assets/paper_texture1.png" class="paper-bg"/>
+
+    <img src="assets/inputs.png" class="part inputs"/>
+    <img src="assets/processing.png" class="part processing"/>
+    <img src="assets/ritual_play.png" class="part ritual"/>
+    <img src="assets/speculative_engine.png" class="part engine"/>
+    <img src="assets/outputs.png" class="part outputs"/>
+    <img src="assets/feedback.png" class="part feedback"/>
+
+    <!-- project thumbnails (hidden initially) -->
+    <div class="projects inputs-projects">
+  <a href="project1.html" class="thumb p1" data-info="Project 1 info">
+    <img src="assets/p1.png">
+  </a>
+  <a href="project2.html" class="thumb p2" data-info="Project 2 info">
+    <img src="assets/p2.png">
+  </a>
+  <a href="project3.html" class="thumb p3" data-info="Project 3 info">
+    <img src="assets/p1.png">
+  </a>
+  <a href="project3.html" class="thumb p4" data-info="Project 4 info">
+    <img src="assets/p2.png">
+  </a>
+</div>
+
+<div class="projects processing-projects">
+  <a href="project3.html" class="thumb" data-info="Project 3 info">
+    <img src="assets/p3.png">
+  </a>
+  <a href="project4.html" class="thumb" data-info="Project 4 info">
+    <img src="assets/p4.png">
+  </a>
+</div>
+
+
+
+  </div>
+</section>
+
+
+<script src="script.js"></script>
 </body>
 </html>
